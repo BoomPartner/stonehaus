@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    /* font-family: "Lora", serif; */
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+.banner-principal {
+    background: url("/banners/principal.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 50%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+.banner-catalogo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0.8) 100%);
+    /* pointer-events: none; */
+}
+.banner-nosotros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0.8) 100%);
+    /* pointer-events: none; */
+}
+
+
+.banner-proyectos {
+    background: url("/banners/proyectos.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 50%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .banner-proyectos{
+        padding-bottom: 100%;
+    }
+    
+}
+@media (max-width: 730px) {
+    .banner-nosotros{
+        padding-bottom: 100% !important;
+    }
+    .banner-principal{
+        padding-bottom: 100%
+    }
+    .banner-catalogo{
+        padding-bottom: 100% !important;
+    }
+    .banner-simulator{
+        padding-bottom: 100% !important;
+    }
+    
+}
+
+.banner-catalogo {
+    background: url("/home/2.webp") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 50%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+
+.banner-nosotros {
+    background: url("/nosotros/nosotros.webp") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 50%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+
+.banner-simulator {
+    background: url("/nosotros/simulador.jpeg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 50%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+.banner-simulator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0.8) 100%);
+    /* pointer-events: none; */
+}
+
+
+.banner-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0.8) 100%);
+    /* pointer-events: none; */
+}
+
+/* Parallax Effect Home  */
+
+
+.imageContainer1 {
+    position: absolute;
+}
+
+.imageContainer1 img {
+    object-fit: cover;
+}
+
+.imageContainer1:nth-of-type(1) {
+    width: 50vh;
+    z-index: 1;
+}
+
+.imageContainer1:nth-of-type(2) {
+    left: 30vw;
+    top: 40vh;
+    width: 30vh;
+    z-index: 2;
+}
+@media (max-width: 1725px){
+    .imageContainer1:nth-of-type(2) {
+        left: 25vw;
+    }
+}
+@media (max-width: 1412px){
+    .imageContainer1:nth-of-type(2) {
+        left: 20vw;
+    }
+}
+
+  
+
+.imageContainer2 {
+    position: absolute;
+}
+
+.imageContainer2 img {
+    object-fit: cover;
+}
+
+.imageContainer2:nth-of-type(1) {
+    width: 50vh;
+    z-index: 1;
+}
+
+.imageContainer2:nth-of-type(2) {
+    left: 10vw;
+    top: 40vh;
+    width: 30vh;
+    z-index: 2;
+}
+
+
+.imageContainer3 {
+    position: absolute;
+}
+
+.imageContainer3 img {
+    object-fit: cover;
+}
+
+.imageContainer3:nth-of-type(1) {
+    width: 50vh;
+    z-index: 1;
+}
+
+.imageContainer3:nth-of-type(2) {
+    left: 10vw;
+    top: 40vh;
+    width: 30vh;
+    z-index: 2;
+}
+
+.swiper-inicio{
+    width: 100%;
+    height: auto;
+}
+
+/* @media (max-width: 730px){
+    .swiper-slide{
+        width: 50% !important;
+    }
+} */
+
+@keyframes beatFade {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 0.5;
+    }
+  }
+  
+  .animation {
+    animation: beatFade 4s infinite;
+  }
+
+  .sala-grande{
+    transition: all .8s ease-in-out !important; 
+  }

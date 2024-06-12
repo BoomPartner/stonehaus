@@ -1,0 +1,63 @@
+
+/* Card Reverse  */
+.card-container {
+    width: 350px;
+    height: 500px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    /* El reverso muestra información adicional y está girado 180 grados inicialmente */
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+.card-back-txt {
+    transform: translateZ(50px);
+    /* Ajusta este valor para más o menos profundidad */
+    font-size: 18px;
+    /* Ajusta el tamaño del texto según sea necesario */
+    color: white;
+    /* Asegúrate de que el texto sea legible sobre el fondo */
+    z-index: 20;
+    /* Asegura que el texto esté sobre el fondo */
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+@keyframes beatFade {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 0.5;
+    }
+  }
+  
+  .animation-stones {
+    animation: beatFade 4s infinite;
+  }
+  
