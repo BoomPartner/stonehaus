@@ -100,7 +100,7 @@ const ComponentFooter = () => {
         <div className="flex justify-center">
          <div className="text-center">
          <Image src={"/logos/logo_blanco.png"} alt='logo' width={300} height={100}></Image>
-          <h5 className='mt-5'>© Copyright 2024</h5>
+          <h5 className='mt-5'>© Copyright 2025</h5>
          </div>
         </div>
         <div className="w-full mt-10">
